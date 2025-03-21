@@ -2,7 +2,6 @@ import 'package:country_picker/country_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
-
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
@@ -51,15 +50,19 @@ class MyApp extends StatelessWidget {
         Locale('he'),
         Locale('fa'),
         Locale('da'),
-        Locale.fromSubtags(languageCode: 'zh', scriptCode: 'Hans'), // Generic Simplified Chinese 'zh_Hans'
-        Locale.fromSubtags(languageCode: 'zh', scriptCode: 'Hant'), // Generic traditional Chinese 'zh_Hant'
+        Locale.fromSubtags(
+            languageCode: 'zh',
+            scriptCode: 'Hans'), // Generic Simplified Chinese 'zh_Hans'
+        Locale.fromSubtags(
+            languageCode: 'zh',
+            scriptCode: 'Hant'), // Generic traditional Chinese 'zh_Hant'
       ],
       localizationsDelegates: const [
         CountryLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
-      ], 
+      ],
       home: const HomePage(),
     );
   }
@@ -112,7 +115,8 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               header: const Padding(
-                padding: EdgeInsets.only(top: 10.0, bottom: 10.0, left: 20.0, right: 20.0),
+                padding: EdgeInsets.only(
+                    top: 10.0, bottom: 10.0, left: 20.0, right: 20.0),
                 child: Text(
                   'Select your country',
                   style: TextStyle(
