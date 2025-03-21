@@ -19,18 +19,16 @@ void showCountryListBottomSheet({
   bool showSearch = true,
   bool useSafeArea = false,
   bool useRootNavigator = false,
-  bool showDragHandle = false,
   bool moveAlongWithKeyboard = false,
   Widget header = const SizedBox.shrink(),
 }) {
   showModalBottomSheet(
-    showDragHandle: showDragHandle,
-  
     context: context,
     isScrollControlled: true,
     backgroundColor: Colors.transparent,
     useSafeArea: useSafeArea,
     useRootNavigator: useRootNavigator,
+    showDragHandle: true,
     builder: (context) => _builder(
       context,
       onSelect,
